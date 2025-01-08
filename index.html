@@ -5,54 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Invitation</title>
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-    }
-    .invitation {
-      background: #ffebcd;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 500px;
-      margin: 20px auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    h1 {
-      color: #ff6347;
-    }
-    .details {
-      margin: 20px 0;
-      font-size: 18px;
-      color: #333;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      color: white;
-      background: #ff6347;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    a:hover {
-      background: #e5533d;
-    }
-  </style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .card {
+            width: 300px;
+            height: 450px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .card .top-left,
+        .card .bottom-right {
+            font-size: 24px;
+            position: absolute;
+        }
+
+        .card .top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .card .top-left .spade,
+        .card .bottom-right .spade {
+            font-size: 48px;
+            display: block;
+        }
+
+        .card .bottom-right {
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+
+        .card .center {
+            margin-top: 80px;
+        }
+
+        .card .center .spade-large {
+            font-size: 100px;
+        }
+
+        .card .center h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .card .center .date,
+        .card .center .location {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .card .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .card .bottom {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-<div class="invitation">
-    <h1>You're Invited!</h1>
-    <p class="details">
-        Join us to celebrate Aziza’s Birthday!<br><br>
-        📅 <b>Date:</b> 18.01.2025 <br>
-        ⏰ <b>Time:</b> 4.00 pm <br>
-        📍 <b>Location:</b> Colibri <br><br>
-        RSVP by [Insert RSVP Date]!
-    </p>
-    <a href="mailto:your-email@example.com">RSVP Now</a>
+<div class="card">
+    <div class="top-left">
+        A
+        <span class="spade">&spades;</span>
+    </div>
+
+    <div class="top-right">
+        4.00 pm<br>
+        dress code:<br>
+        elegant total black
+    </div>
+
+    <div class="center">
+        <div class="date">18.01.25</div>
+        <div class="location">Colibri</div>
+        <div class="spade-large">&spades;</div>
+        <h1>Aziza</h1>
+    </div>
+
+    <div class="bottom">
+        Invites you to a birthday dinner
+    </div>
+
+    <div class="bottom-right">
+        A
+        <span class="spade">&spades;</span>
+    </div>
 </div>
 </body>
 </html>
